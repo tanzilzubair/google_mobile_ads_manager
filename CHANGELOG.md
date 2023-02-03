@@ -1,3 +1,6 @@
-## 0.0.1
+## [1.0.1] - Minor changes
+* Fixed LICENSE file not being read properly by pub.dev
+* Added example
 
-* TODO: Describe initial release.
+## [1.0.0] - Initial Release
+* Initial release

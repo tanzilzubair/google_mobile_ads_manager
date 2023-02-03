@@ -14,7 +14,7 @@
 
 name: google_mobile_ads_manager
 description: This package provides a simple, concise, and fully managed way of interacting with the AdMobSDK for Dart.
-version: 1.0.0
+version: 1.0.1
 homepage: https://www.tanzilzubair.tech
 repository: https://github.com/tanzilzubair/google_mobile_ads_manager
 

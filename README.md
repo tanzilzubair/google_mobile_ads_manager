@@ -97,10 +97,10 @@ ManagedAppOpenAd ad =  MobileAdsManager.instance.getManagedAppOpenAd()!;
 ad.showAppOpenAd();
 ```  
 
-App Open Ads can be shown based in a probabilistic method (for example, when an App Open Ad should be shown 60% of the time a user opens the app) by passing the probability, ranging from `0.0` to `1.0` to `AppOpenAdInitializer.loadChance`.
+App Open Ads can be shown based on a probabilistic method (for example, when an App Open Ad should be shown 60% of the time a user opens the app) by passing the probability, ranging from `0.0` to `1.0` to `AppOpenAdInitializer.loadChance`.
 
 **Note:**
-- Depending on what `ManagedAppOpenAd.loadChance` is, the `ManagedOpenAd` may be null. Passing no value results in a `loadChance` of `1.0`,  which guarantees the `ManagedOpenAd` will always be loaded.
+- Depending on what `ManagedAppOpenAd.loadChance` is, the `ManagedAppOpenAd` may be null. Passing no value results in a `loadChance` of `1.0`,  which guarantees the `ManagedAppOpenAd` will always be loaded.
 
 ```dart  
 // Initializing the App Open Ad with an AppOpenAdInitializer configuration
@@ -135,7 +135,7 @@ ad.dispose();
 ```  
 
 ## Interstitial Ads  
-Interstitial Ads are interacted with through a fully self-managing queue instance of  `ManagedInterstitialAdQueue`,  similar to Rewarded Ads. The queue contains a number of `InterstitialAd`s determined by `InterstitialAdInitializer.count`, and automatically disposes an Ad once its shown, and loads another in its place.
+Interstitial Ads are interacted with through a fully self-managing queue instance of  `ManagedInterstitialAdQueue`,  similar to Rewarded Ads. The queue contains a number of `InterstitialAd`s determined by `InterstitialAdInitializer.count`, and automatically disposes an Ad once it's shown, and loads another in its place.
 In this way, a small number of ads are always preloaded and ready to be shown, cutting down on waiting times.
 
 The queue can be initialized by providing an instance of `InterstitialAdInitializer` to `initializeSDK` during SDK initialization, Alternatively, they can also be initialized at any time by calling 
@@ -209,7 +209,7 @@ queue?.dispose();
 - Calling `dispose` **does not dispose an individual ad**, and rather disposes the entire queue of ads for that Ad Unit ID, as well as the ManagedInterstitialAdQueue instance. Individual ads will be automatically disposed once they're shown, or if they ever fail to load.
 
 ## Rewarded Ads  
-Rewarded Ads are interacted with through a fully self-managing queue instance of `ManagedRewardedAdQueue`,  similar to Interstitial Ads. The queue contains a number of `RewardedAd`s determined by `RewardedAdInitializer.count`, and automatically disposes an Ad once its shown, and loads another in its place.  
+Rewarded Ads are interacted with through a fully self-managing queue instance of `ManagedRewardedAdQueue`,  similar to Interstitial Ads. The queue contains a number of `RewardedAd`s determined by `RewardedAdInitializer.count`, and automatically disposes an Ad once it's shown, and loads another in its place.  
 In this way, a small number of ads are always preloaded and ready to be shown, cutting down on waiting times.  
   
 The queue can be initialized by providing an instance of `RewardedAdInitializer` to `initializeSDK` during SDK initialization, Alternatively, they can also be initialized at any time by calling  
